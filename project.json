@@ -1,5 +1,5 @@
 {
-  "name": "realtime-talks",
+  "name": "food-is-life",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/realtime-talks"
+        "outputPath": "dist/food-is-life"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "realtime-talks:build"
+        "buildTarget": "food-is-life:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "realtime-talks:build:development",
+          "buildTarget": "food-is-life:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "realtime-talks:build:production",
+          "buildTarget": "food-is-life:build:production",
           "hmr": false
         }
       }
@@ -41,23 +41,23 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "realtime-talks:build"
+        "buildTarget": "food-is-life:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "realtime-talks:build:development"
+          "buildTarget": "food-is-life:build:development"
         },
         "production": {
-          "buildTarget": "realtime-talks:build:production"
+          "buildTarget": "food-is-life:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/realtime-talks"],
+      "outputs": ["coverage/food-is-life"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "coverage/realtime-talks"
+        "reportsDirectory": "coverage/food-is-life"
       }
     },
     "lint": {
@@ -70,7 +70,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "realtime-talks:build"
+        "buildTarget": "food-is-life:build"
       }
     }
   },

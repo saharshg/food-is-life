@@ -8,15 +8,15 @@
       "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "e2e/cypress.config.ts",
-        "devServerTarget": "realtime-talks:serve:development",
+        "devServerTarget": "food-is-life:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "realtime-talks:serve:production"
+          "devServerTarget": "food-is-life:serve:production"
         },
         "ci": {
-          "devServerTarget": "realtime-talks:serve-static"
+          "devServerTarget": "food-is-life:serve-static"
         }
       }
     },
@@ -29,5 +29,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["realtime-talks"]
+  "implicitDependencies": ["food-is-life"]
 }
