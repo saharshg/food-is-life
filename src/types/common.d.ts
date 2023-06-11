@@ -1,5 +1,5 @@
 type Food = {
-    value: string;
+    value: string
 };
 
 type Profile = {

@@ -6,7 +6,7 @@ import Friends from './friends';
 import FoodList from 'src/components/foodList';
 
 export function App() {
-  const [myFood, setMyFood] = useState([]);
+  const [myFood, setMyFood] = useState<Food[] | null>([]);
   const { currentUser } = useAuth();
 
   const getMyFood = () => {
@@ -14,7 +14,7 @@ export function App() {
       .from('foods')
       .select('value')
       .eq('profile_id', currentUser?.id)
-      .then(({ data }: { data: any }) => {
+      .then(({ data }) => {
         setMyFood(data);
       });
   };
