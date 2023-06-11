@@ -11,17 +11,9 @@ const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }: { children: ReactElement }) => {
   const [currentUser, setcurrentUser] = useState<any>();
+
   useEffect(() => {
-    // TODO: Move this to supabase trigger event
-    if (currentUser) {
-      supabase.from('profile').insert({
-        name: currentUser?.user_metadata.name,
-        user_id: currentUser.id,
-      });
-    }
-  }, [currentUser]);
-  useEffect(() => {
-    supabase.auth.getSession().then((session) => {
+    supabase.auth.getSession().then((session: any) => {
       setcurrentUser(session?.user);
     });
 
